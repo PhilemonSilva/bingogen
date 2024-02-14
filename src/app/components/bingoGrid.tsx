@@ -11,7 +11,7 @@ const BingoGrid: React.FC<{
 
     return <div ref={animationParent} className="grid grid-cols-5 w-1/2 h-1/2 aspect-square rounded gap-1" >
         {
-            elements.map((item, index) => (
+            elements?.map((item, index) => (
                 <button
                     key={item.text}
                     title={item.text}
