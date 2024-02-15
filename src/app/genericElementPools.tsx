@@ -1,6 +1,6 @@
-import { BingoElement } from "./types";
+import type { BingoElement } from "./types";
 
-export const genericLoremIpsumPool: Array<BingoElement> = [
+export const genericLoremIpsumPool: BingoElement[] = [
     { isBeingEdited: false, selected: false, text: 'Aenean sit amet urna ac magna aliquam eleifend ut id tellus.', },
     { isBeingEdited: false, selected: false, text: 'Curabitur faucibus tellus et risus venenatis, ut aliquam nisl convallis.', },
     { isBeingEdited: false, selected: false, text: 'Nam ac enim viverra turpis pulvinar rutrum lobortis id lorem.', },

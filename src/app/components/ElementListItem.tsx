@@ -52,7 +52,7 @@ const ElementListItem: React.FC<{
         `}
     >
         {elementTextComponent}
-        <button onClick={comfirmChanges} >
+        <button className="grid place-content-center align" onClick={comfirmChanges} >
             <Pencil
                 className="
                     stroke-indigo-400
@@ -62,7 +62,7 @@ const ElementListItem: React.FC<{
                 size={15}
             />
         </button>
-        <button onClick={deleteElement}>
+        <button className="grid place-content-center align" onClick={deleteElement}>
             <X
                 className="
                     stroke-red-500
