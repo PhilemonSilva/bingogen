@@ -50,8 +50,10 @@ const EditElementsButton: React.FC<{
                 "
             >
                 <SheetHeader>
-                    <SheetTitle>Edit Elements</SheetTitle>
-                    <SheetDescription className="text-gray-100">
+                    <SheetTitle className="text-3xl font-extrabold text-white">
+                        Edit Elements
+                    </SheetTitle>
+                    <SheetDescription className="text-indigo-950 font-extrabold p-3">
                         Edit Elements on the bingo card.
                     </SheetDescription>
                     <div
@@ -60,6 +62,7 @@ const EditElementsButton: React.FC<{
                             border border-purple-900 rounded
                             max-h-min w-[99%] m-1 p-3
                             flex items-center gap-3
+                            transition-all
                             hover:bg-purple-600 hover:scale-105
                         "
                     >
@@ -98,11 +101,6 @@ const EditElementsButton: React.FC<{
                         ))
                     }
                 </ul>
-                <SheetFooter>
-                    <SheetClose asChild>
-                        <Button type="submit">Save changes</Button>
-                    </SheetClose>
-                </SheetFooter>
             </SheetContent>
         </Sheet>
     )

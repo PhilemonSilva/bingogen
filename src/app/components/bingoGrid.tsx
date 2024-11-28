@@ -9,7 +9,7 @@ const BingoGrid: React.FC<{
 
     const [animationParent] = useAutoAnimate();
 
-    return <div ref={animationParent} className="grid grid-cols-5 w-1/2 h-1/2 aspect-square rounded gap-1" >
+    return <div ref={animationParent} className="grid grid-cols-5 w-2/5 h-2/5 aspect-square rounded gap-1" >
         {
             elements?.map((item, index) => (
                 <button

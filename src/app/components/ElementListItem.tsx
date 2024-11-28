@@ -2,7 +2,7 @@ import { Updater } from "use-immer";
 import { BingoElement } from "../types";
 import { Button } from "./ui/button"
 import { useState } from "react";
-import { Pencil, X } from 'lucide-react';
+import { Pencil, X, CheckCircle } from 'lucide-react';
 
 const ElementListItem: React.FC<{
     element: BingoElement,
@@ -30,6 +30,17 @@ const ElementListItem: React.FC<{
         </p>
     );
 
+    let editIcon = (
+        <Pencil
+            className="
+                stroke-indigo-400
+                transition-all
+                hover:stroke-indigo-600 hover:scale-105
+            "
+            size={15}
+        />
+    )
+
     if (element.isBeingEdited) {
         elementTextComponent = (
             <input
@@ -39,6 +50,17 @@ const ElementListItem: React.FC<{
                 onBlur={comfirmChanges}
             />
         )
+        
+        editIcon = (
+            <CheckCircle
+            className="
+                stroke-green-500
+                transition-all
+                hover:stroke-green-600 hover:scale-105
+            "
+            size={15}
+        />
+        )
     }
 
     return <li
@@ -46,21 +68,14 @@ const ElementListItem: React.FC<{
             p-1 m-1
             grid grid-cols-[20fr_1fr_1fr] gap-1
             border border-gray-800 rounded
-            ${element.isBeingEdited ?  "bg-indigo-200" : "bg-gray-100"} 
+            ${element.isBeingEdited ? "bg-indigo-200" : "bg-gray-100"} 
             transition-all
             hover:bg-indigo-300 hover:scale-105
         `}
     >
         {elementTextComponent}
         <button className="grid place-content-center align" onClick={comfirmChanges} >
-            <Pencil
-                className="
-                    stroke-indigo-400
-                    transition-all
-                    hover:stroke-indigo-600 hover:scale-105
-                "
-                size={15}
-            />
+            {editIcon}
         </button>
         <button className="grid place-content-center align" onClick={deleteElement}>
             <X
