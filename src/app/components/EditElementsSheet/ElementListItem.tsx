@@ -1,6 +1,6 @@
 import { Updater } from "use-immer";
-import { BingoElement } from "../types";
-import { Button } from "./ui/button"
+import { BingoElement } from "../../types";
+import { Button } from "../ui/button"
 import { useState } from "react";
 import { Pencil, X, CheckCircle } from 'lucide-react';
 
