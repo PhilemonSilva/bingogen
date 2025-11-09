@@ -14,7 +14,7 @@ const EditElementsSheetHeader: React.FC<{
     searchQuery,
     setSearchQuery,
 }) => {
-
+    
     const queryInputHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
         setSearchQuery(e.target.value);
     }

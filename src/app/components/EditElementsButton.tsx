@@ -13,8 +13,6 @@ const EditElementsButton: React.FC<{
     applyChanges: () => void,
 }> = ({ elementPool, setElementPool, applyChanges }) => {
 
-    
-
     return (
         <Sheet>
             <SheetTrigger asChild>
