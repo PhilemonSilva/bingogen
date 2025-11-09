@@ -16,7 +16,7 @@ const EditElementsButton: React.FC<{
     return (
         <Sheet>
             <SheetTrigger asChild>
-                <Button variant="outline">Open</Button>
+                <Button variant="outline">Edit Elements</Button>
             </SheetTrigger>
             <EditElementsSheet 
                 elementPool={elementPool} 
